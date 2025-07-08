@@ -24,7 +24,7 @@ export async function POST(req: NextRequest){
         if(ifUserExist){
             return NextResponse.json({message: "You have already submitted your answer"}, {status: 400})
         }
-        const user = await UserResponse.create({
+        await UserResponse.create({
             userName: body.name,
             answers: body.answer,
             quizId: id.id

@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Search, Plus, BookOpen, User, ArrowRight, Brain, Sparkles, FileText } from "lucide-react";
 import axios from "axios";
 
-export default function page() {
+export default function Page() {
   const [nameTitle, setnameTitle] = useState("")
   const [data, setData] = useState<MCQData[]>()
   const [isLoaded, setIsLoaded] = useState(false)

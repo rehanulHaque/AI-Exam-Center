@@ -30,7 +30,7 @@ export default function UserTestPage() {
         answer: ""
       })))
     } catch (error: any) {
-      toast.error("Failed to fetch quiz")
+      toast.error(error.message||"Failed to fetch quiz")
     }
   }
 
