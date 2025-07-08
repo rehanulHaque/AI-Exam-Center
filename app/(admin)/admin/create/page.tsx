@@ -34,7 +34,7 @@ export default function CreateExamPage() {
         adminName,
         title: title.toLowerCase()
       })
-      const link = `${process.env.NEXT_PUBLIC_URL}/test?id=${response.data.token}`
+      const link = `${process.env.MODE === "development" ? process.env.NEXT_PUBLIC_URL : "/"}/test?id=${response.data.token}`
       setShareUrl(link)
     } catch (error) {
       console.error(error)

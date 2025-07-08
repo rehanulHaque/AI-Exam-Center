@@ -25,7 +25,7 @@ export default function UpdateQuizPage({ params }: { params: Promise<{ id: strin
       setId(resolved.id)
       const response = await axios.get(`/api/admin/update?id=${resolved.id}`)
       setQuiz(response.data.quiz)
-      const url = `${process.env.NEXT_PUBLIC_URL}/test?id=${response.data.token}`
+      const url = `${process.env.MODE === "development" ? process.env.NEXT_PUBLIC_URL : "/"}/test?id=${response.data.token}`
       setShareUrl(url)
     } catch (error: any) {
       console.error(error)
