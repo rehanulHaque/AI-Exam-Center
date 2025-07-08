@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { BookOpen, Brain, Users, Zap, ArrowRight, CheckCircle, Clock, Target, Sparkles, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
 
-const AIExamCenterLanding = () => {
+export default function AIExamCenterLanding() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -246,5 +246,3 @@ const AIExamCenterLanding = () => {
     </div>
   );
 };
-
-export default AIExamCenterLanding;
